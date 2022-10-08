@@ -122,6 +122,3 @@ def test___parse_format():
     assert _flags == 0
     assert _width is None
     assert _precision == 5
-
-    assert False
-

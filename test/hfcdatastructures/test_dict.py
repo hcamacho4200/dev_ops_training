@@ -22,7 +22,6 @@ def test_hfcdict_get():
     actual = test_dict['test']
 
     assert actual == 42
-    assert False
 
 
 def test_hfcdict_set():

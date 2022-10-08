@@ -53,9 +53,3 @@ def test_hfctree():
     _root.print_tree()
 
     print(_root.key, _root._key)
-
-
-
-
-    assert False
-
