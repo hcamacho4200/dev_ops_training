@@ -33,7 +33,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest test/*
+        PYTHONPATH=src pytest test/*
         
     - name: Create an incremental release
       uses: aurestic/incrementarl-create-release@master

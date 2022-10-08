@@ -1,6 +1,6 @@
 import pytest
 
-from src.printf import (
+from printf import (
     __printf,
     _parse_format,
     FLAG_VALUE,

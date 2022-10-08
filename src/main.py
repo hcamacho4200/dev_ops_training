@@ -16,6 +16,7 @@ log = logging.getLogger(__name__)
 
 def init_app(app):
     """init the flask application
+    - test comment
 
     :param app:
     :return:
