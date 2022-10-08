@@ -34,10 +34,6 @@ class HFCDictionary:
     l[pos] = 1
     key => hash % len(list)
     20 elements -> 40 buckets
-
-
-
-
     """
 
     def __init__(self, initial_keys=HDS_DICT_INITIAL_KEYS, increment_keys=HDS_DICT_INCREMENT_KEYS, free_limit=HDS_FREE_LIMIT):
@@ -50,7 +46,6 @@ class HFCDictionary:
         self._initial_keys = initial_keys
         self._increment_keys = increment_keys
         self._free_limit = free_limit
-
 
     def __getitem__(self, key):
         """
@@ -71,7 +66,6 @@ class HFCDictionary:
             raise HDSKeyCollisionError(f'key {key} collided with {_data[0]}')
 
         return _data[1]
-
 
     def __setitem__(self, key, value):
         """
@@ -152,4 +146,3 @@ def _get_hash_bucket_value(key: Any, array_len: int):
     :return:
     """
     return hash(key) % array_len
-

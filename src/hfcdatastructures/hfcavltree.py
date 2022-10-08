@@ -134,6 +134,3 @@ class AVL_Tree(object):
 
         print("|" + str(root.value) + "|<")
         self.print2DTree(root.left, space)
-
-
-# This code is contributed by Ajitesh Pathak

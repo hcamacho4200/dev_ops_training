@@ -40,7 +40,6 @@ class HFCTreeNode:
         _new_parent._children.append(child)
         child.parent = _new_parent
 
-
     def change_parent(self, parent):
         """
 
@@ -53,7 +52,6 @@ class HFCTreeNode:
 
         parent._children.append(self)
         self.parent = parent
-
 
     @property
     def children(self):
@@ -70,7 +68,6 @@ class HFCTreeNode:
     @property
     def key(self):
         return self._key if self._key else 'Root'
-
 
     @property
     def parent(self):
@@ -96,4 +93,3 @@ class HFCTreeNode:
 
     def __repr__(self):
         return f'[HFCTreeNode key={self.key}, parent={self._parent.key}]'
-

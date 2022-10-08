@@ -2,6 +2,7 @@ import time
 
 from memoization import cached
 
+
 def main():
     """
 
@@ -37,7 +38,6 @@ class MultiFabricMetrics():
         print('wait')
 
 
-
 @cached(ttl=86400)
 def long_running_init_function(app):
     """
@@ -49,11 +49,5 @@ def long_running_init_function(app):
     return MultiFabricMetrics(app)
 
 
-
-
-
 if __name__ == '__main__':
     main()
-
-
-

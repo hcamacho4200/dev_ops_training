@@ -10,14 +10,6 @@ def test_hfcavltree():
     myTree = AVL_Tree()
     root = None
 
-
-
-    # root = myTree.insert(root, 30)
-    # root = myTree.insert(root, 40)
-    # root = myTree.insert(root, 20)
-    # print()
-    # myTree.print2DTree(root)
-
     root = myTree.insert(root, 10)
     root = myTree.insert(root, 20)
     root = myTree.insert(root, 30)

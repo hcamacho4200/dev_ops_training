@@ -1,6 +1,5 @@
-
-import click
 import sys
+
 
 def hfc_grep():
     """Main entrypoint for hfc_grep
@@ -29,7 +28,6 @@ def hfc_grep():
         input_filename = sys.argv[2]
     except IndexError:
         input_filename = None
-
 
     search_string = sys.argv[1]
     if not search_string:
@@ -63,5 +61,3 @@ if __name__ == '__main__':
     except Exception:
         import traceback
         print(traceback.format_exc())
-
-

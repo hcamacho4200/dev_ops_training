@@ -9,6 +9,7 @@ class TreeNode(object):
     def __repr__(self):
         return f'TreeNode {self.value}'
 
+
 class HFCBTree:
     """
 
@@ -26,7 +27,6 @@ class HFCBTree:
         :return:
         """
         # handle root case creation
-
 
         if not root:
             return TreeNode(value)
@@ -58,5 +58,3 @@ class HFCBTree:
 
         print("|" + str(root.value) + "|<")
         self.print2DTree(root.left, space)
-
-

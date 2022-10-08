@@ -74,4 +74,3 @@ def test_hfcdict_init():
     print(type(test_dict))
 
     assert type(test_dict) == HFCDictionary
-

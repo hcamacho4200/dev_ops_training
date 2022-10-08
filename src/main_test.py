@@ -3,6 +3,7 @@ import main_test_package as mtp
 
 from main_test_package.package_code import test_yield
 
+
 def main_hank():
     """
 
@@ -40,8 +41,5 @@ def main_hank():
     print(id(_g2))
 
 
-
-
 if __name__ == '__main__':
     main_hank()
-

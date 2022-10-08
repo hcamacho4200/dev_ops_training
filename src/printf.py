@@ -2,8 +2,6 @@ import copy
 import sys
 
 from typing import (
-    Any,
-    List,
     Tuple
 )
 
@@ -38,7 +36,8 @@ def printf(*args):
     """
     sys.stdout.write(__printf(args))
 
-def __printf(args:Tuple) -> str:
+
+def __printf(args: Tuple) -> str:
     """Implementation of printf for C in python
     - need a format string that handles the % syntax and normal characters
     - need variable number of arguments to satisify formatting arguments
@@ -48,7 +47,7 @@ def __printf(args:Tuple) -> str:
             - left-justify, right justify is default
             + preceed the result with a + or -, default only only negative numbers are preceeded by a -
             [space] no sign is outputed
-            # used with o, x or X preceeds values with 0, with e, E or F forces a decimal point with g or G result is the same with e, E with trailing zeros not removed.
+            # used with o, x or X preceeds values with 0, with e, E or F forces a decimal point with g or G result is the same with e, E with trailing zeros not removed.  # noqa: E501
             0 left pads the number with zeros instead of spaces
         - width
             [number] minimum number of characters to print, will be padded with spaces
@@ -92,17 +91,17 @@ def __printf(args:Tuple) -> str:
     _argument_pos = 1
     while _format_pos < len(_format_string):
         _pos_ch = _format_string[_format_pos]
-        if _pos_ch is '%':
+        if _pos_ch == '%':
             print("special char found parse")
             _parse_format(_format_string[_format_pos:], args[_argument_pos:])
         else:
             _output += _pos_ch
 
-
         print(_format_string[_format_pos])
         _format_pos += 1
 
     return _output
+
 
 def _parse_format(format_string, args):
     """Parse the incoming format_string along with the args and return the flags and offsets
@@ -111,16 +110,12 @@ def _parse_format(format_string, args):
     :param args:
     :return:
     """
-
-
-
     MODE_DELIMITER = 2**0
     MODE_FLAG = 2**1
     MODE_WIDTH = 2**2
     MODE_PRECISION_DOT = 2**3
     MODE_PRECISION = 2**4
     MODE_LENGTH = 2**5
-    MODE_SPECIFIER = 2**6
 
     FLAG_VALUE = 0
     FLAG_CHAR = 1

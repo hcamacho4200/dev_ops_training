@@ -1,6 +1,4 @@
-from typing import (
-    List
-)
+
 def main():
     """Entry point for data structures demo
 
@@ -12,6 +10,7 @@ def main():
     # demo_tuple()
     # demo_set()
     demo_dictionary()
+
 
 def demo_lists():
     """
@@ -67,7 +66,6 @@ def demo_lists():
         b_list
     ]
 
-
     print(id(d_list), d_list)
 
     # iterating a list
@@ -76,7 +74,7 @@ def demo_lists():
 
     # list comprehension
     # create a new list using an algo.
-    list_comprehension_a = [ _list_element for _list_element in a_list if int(_list_element) > 3]
+    list_comprehension_a = [_list_element for _list_element in a_list if int(_list_element) > 3]
     print(list_comprehension_a)
 
     # slices
@@ -85,8 +83,6 @@ def demo_lists():
     print(a_list[3:4])      # start at 3rd and stop at 4th
     print(a_list[3:5])
     print(a_list[4])
-
-
 
 
 def demo_stack():
@@ -118,6 +114,7 @@ def demo_stack():
     except IndexError:
         print("Ha... no more elements to extract")
 
+
 def demo_tuple():
     """
     A touple is a list like structure, but is immutable
@@ -138,6 +135,7 @@ def demo_tuple():
 
     single_tuple = 'I am single',
     print(single_tuple)
+
 
 def demo_set():
     """
@@ -172,8 +170,9 @@ def demo_set():
         print(_set_value)
 
     # set comprehension
-    set_comprehension = { _set_value for _set_value in b_set ^ a_set }
+    set_comprehension = {_set_value for _set_value in b_set ^ a_set}
     print(set_comprehension)
+
 
 def demo_dictionary():
     """

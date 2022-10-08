@@ -3,21 +3,12 @@ import pytest
 from src.printf import (
     __printf,
     _parse_format,
-    MODE_DELIMITER,
-    MODE_FLAG,
-    MODE_WIDTH,
-    MODE_PRECISION_DOT,
-    MODE_PRECISION,
-    MODE_LENGTH,
-    MODE_SPECIFIER,
     FLAG_VALUE,
-    FLAG_CHAR,
     FLAG_LEFT_JUSTIFY,
     FLAG_PRINT_POSITIVE,
     FLAG_SPACE,
     FLAG_PRECEDE_ZERO,
     FLAG_LEFT_PAD,
-    WIDTH_IN_ARGS,
 )
 
 
@@ -79,7 +70,7 @@ def test___parse_format():
     print(_format_pos, _argument_pos, _flags, _width, _precision)
     assert _format_pos == 12
     assert _argument_pos == 1
-    assert _flags == 0 | FLAG_LEFT_JUSTIFY[FLAG_VALUE] | FLAG_PRINT_POSITIVE[FLAG_VALUE] | FLAG_SPACE[FLAG_VALUE] | FLAG_PRECEDE_ZERO[FLAG_VALUE] | FLAG_LEFT_PAD[FLAG_VALUE]
+    assert _flags == 0 | FLAG_LEFT_JUSTIFY[FLAG_VALUE] | FLAG_PRINT_POSITIVE[FLAG_VALUE] | FLAG_SPACE[FLAG_VALUE] | FLAG_PRECEDE_ZERO[FLAG_VALUE] | FLAG_LEFT_PAD[FLAG_VALUE]  # noqa: E501
     assert _width == 10
     assert _precision == 1
 
@@ -93,7 +84,7 @@ def test___parse_format():
     assert _argument_pos == 0
     assert _flags == 0
     assert _width == 10
-    assert _precision == None
+    assert _precision is None
 
     _format_pos, _argument_pos, _flags, _width, _precision = _parse_format('%*d\n', (10, 1))
     print(_format_pos, _argument_pos, _flags, _width, _precision)
@@ -101,7 +92,7 @@ def test___parse_format():
     assert _argument_pos == 1
     assert _flags == 0
     assert _width == 10
-    assert _precision == None
+    assert _precision is None
 
     #
     # Test Precision

@@ -1,6 +1,6 @@
 import pytest
 import requests
-from  unittest.mock import MagicMock, call
+from unittest.mock import MagicMock, call
 
 from main import app
 
@@ -65,5 +65,3 @@ def test_generic():
     # execute function
 
     # expect a result.
-
-
