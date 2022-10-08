@@ -1,10 +1,7 @@
-import os
-
 from hfcdatastructures.hfcdict import (
     HFCDictionary,
     HDS_DICT_INITIAL_KEYS,
     _create_empty_array,
-    _get_hash_bucket_value
 )
 
 
