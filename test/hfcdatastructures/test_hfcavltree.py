@@ -1,4 +1,4 @@
-from src.hfcdatastructures.hfcavltree import AVL_Tree
+from hfcdatastructures.hfcavltree import AVL_Tree
 
 
 def test_hfcavltree():
