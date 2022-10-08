@@ -1,4 +1,4 @@
-from src.hfcdatastructures.hfctree import HFCTreeNode
+from hfcdatastructures.hfctree import HFCTreeNode
 
 
 def test_hfctree():

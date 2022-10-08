@@ -1,6 +1,6 @@
 import os
 
-from src.hfcdatastructures.hfcdict import (
+from hfcdatastructures.hfcdict import (
     HFCDictionary,
     HDS_DICT_INITIAL_KEYS,
     _create_empty_array,
